@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tree Cutting Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Tree Cutting Calculator</h1>
+
+    <div class="excel-input-row">
+  <input type="number" id="height" placeholder="Height (m)" step="0.01" />
+  <input type="number" id="width" placeholder="Width (inches)" step="0.01" />
+  <button onclick="addBlock()">Add</button>
+  <button onclick="startNewTree()">Start New Tree</button>
+  <button onclick="resetAll()">Reset All</button>
+</div>
+
+
+    <h2>Blocks Table</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Tree ID</th>
+          <th>Height (m)</th>
+          <th>Width (in)</th>
+          <th>Area (m²)</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="blockTableBody">
+        <!-- Data will appear here -->
+      </tbody>
+    </table>
+
+    <div class="total-section">
+      <h3>Total Area: <span id="totalArea">0</span> m²</h3>
+      <button onclick="resetAll()">Reset All</button>
+    </div>
+    <div style="text-align: center; margin-top: 30px;">
+  <button onclick="generateReport()">Generate Report</button>
+</div>
+
+<div id="reportSection" style="margin-top: 30px;"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
